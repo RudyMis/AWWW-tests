@@ -46,7 +46,7 @@ describe('Database missing columns', function () {
   });
 
   before(async function () {
-    this.timeout(10000);
+    this.timeout(0);
     driver = new Builder().withCapabilities(Capabilities.firefox())
       .setFirefoxOptions(new firefox.Options().headless().windowSize({
         width: 1920,
