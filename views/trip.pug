@@ -1,0 +1,35 @@
+extends template.pug
+block meta
+  title #{trip.name}
+block style
+  include ../css/trip.css
+block main
+  main
+    section#trip_description
+      img(src=trip.img alt='Zdjęcie szczytu')
+      h1 #{trip.name}
+      p
+        | To jest opis wycieczki, w kt&oacute;rym podkre&sacute;lone s&aogon; zalety miejsca, kt&oacute;re si&eogon; odwiedzi.
+        | Poniewa&zdot; to tylko przyk&lstrok;ad, nie ma tu konkretnych informacji.
+      h2 Nag&lstrok;owek z tytu&lstrok;em
+      p
+        | Tu kolejny fragment tekstu. Mo&zdot;e si&eogon; z sk&lstrok;ada&cacute; z kilku akapit&oacute;w.
+      h2 Jeszcze jeden nag&lstrok;&oacute;wek
+      p
+        | I kolejne informacje o wycieczce. Trzeba si&eogon; wysili&cacute; i wymy&sacute;li&cacute; w&lstrok;asne.
+      h2 Istotne informacje
+      ul
+        li termin wycieczki: kiedy&sacute; w przysz&lstrok;o&sacute;ci
+        li temperatury na miejscu: takie w sam raz
+        li warto zabra&cacute;: troch&eogon; ubra&nacute; na zmian&eogon;
+        li cena wycieczki to: #{trip.price}
+        li liczba wolnych miejsc: #{trip.free_seats}
+      h2 Program wycieczki
+      ol
+        li Odwiedziny na miejscu
+        li Obiad
+        li Wyprawa na szczyt wszystkiego
+    section#links
+      a(href='/') Powr&oacute;t
+      a(href='/book/' + trip.id) Zarezerwuj
+

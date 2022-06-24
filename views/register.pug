@@ -1,0 +1,32 @@
+extends template.pug
+
+block meta
+  title Rejestracja
+
+block style
+  include ../css/book.css
+
+block main
+  main
+    if error
+      p(class='error') #{error}
+    if info 
+      p#info(class='info') #{info}
+    h2 Formularz rejestracyjny
+    section#form
+      form(method='post')
+        input#first_name(type='text' placeholder='Imię' name='first_name' maxlength='40' required='')
+        input#last_name(type='text' placeholder='Nazwisko' name='last_name' maxlength='40' required='')
+        input#email(type='email' placeholder='Adres e-mail' name='email' required='')
+        input#password(type='password' placeholder='Password' name='password' required='')
+        input#password(type='password' placeholder='Confirm password' name='confirm_password' required='')
+        label(for='gdpr_permission')
+          | Wyra&zdot;am zgod&eogon; na przetwarzanie moich danych osobowych zgodnie z art. 6 ust. 1 lit. a) Rozporz&aogon;dzenia
+          | Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony os&oacute;b fizycznych
+          | w
+          | zwi&aogon;zku z przetwarzaniem danych osobowych i w sprawie swobodnego przep&lstrok;ywu takich danych oraz uchylenia
+          | dyrektywy 95/46/WE (og&oacute;lne rozporz&aogon;dzenie o ochronie danych), dalej: &bdquo;RODO&rdquo; 
+          br
+          |                      (... tutaj powinna by&cacute; dalsza cz&eogon;&sacute;&cacute; wynikaj&aogon;ca z przepis&oacute;w prawa ...)
+        input#gdpr_permission(type='checkbox' name='gdpr_permission' required='')
+        button(type='submit' name='submit') ZAREJESTRUJ

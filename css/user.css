@@ -1,0 +1,41 @@
+#reservation_description > ul {
+    list-style-type: none;
+}
+
+#reservation_description > ul > li {
+    text-indent: -5px;
+}
+
+#reservation_description > ul > li::before {
+    content: "-";
+    padding-right: 5px;
+}
+
+#links {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 10px 0;
+}
+
+#links > a {
+    background-color: bisque;
+
+    border: solid 1px black;
+
+    padding: 3px;
+}
+
+#links > a:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+
+#links > a:first-child::before {
+    content: "< "
+}
+
+#links > a:last-child::after {
+    content: " >"
+}

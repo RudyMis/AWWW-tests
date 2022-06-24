@@ -1,0 +1,23 @@
+extends template.pug
+block meta
+  title #{user.name}
+block style
+  include ../css/trip.css
+block main
+  main
+    h1 Witaj #{user.name}
+    h2 Twoje rezerwacje:
+    if reservations
+      each res in reservations
+        article.reservations
+          #reservation_description
+            ul.description #{res.tripName}
+              a(href='trip/' + res.TripId)
+                li Trip info
+              li.description Liczba osób #{res.seats}
+    else
+      article Nie masz żadnych rezerwacji
+    section#links
+      //- a(href='/') Powr&oacute;t
+      a(href='/logout') Wyloguj
+

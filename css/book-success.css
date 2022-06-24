@@ -1,0 +1,28 @@
+#links {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin: 10px 0;
+}
+
+#links > a {
+    background-color: bisque;
+
+    border: solid 1px black;
+
+    padding: 3px;
+}
+
+#links > a:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+
+#links > a:first-child::before {
+    content: "< "
+}
+
+#links > a:last-child::after {
+    content: " >"
+}

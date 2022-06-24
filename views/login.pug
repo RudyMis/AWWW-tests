@@ -1,0 +1,20 @@
+extends template.pug
+
+block meta
+  title Logowanie
+
+block style
+  include ../css/book.css
+
+block main
+  main
+    if error
+      p(class='error') #{error}
+    if info 
+      p#info(class='info') #{info}
+    h2 Logowanie
+    section#form
+      form(method='post')
+        input#email(type='email' placeholder='Adres e-mail' name='email' required='')
+        input#password(type='password' placeholder='Password' name='password' required='')
+        button(type='submit' name='submit') ZALOGUJ

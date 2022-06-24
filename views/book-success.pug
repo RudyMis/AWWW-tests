@@ -1,0 +1,16 @@
+extends template.pug
+
+block style
+  include ../css/book.css
+  include ../css/book-success.css
+
+block main
+  main
+    section#trip_informations
+      img(src=trip.img alt='Zdjęcie szczytu')
+      a(href='/trip/' + trip.id)
+        h1 #{trip.name}
+      if info 
+        p#info(class='info') #{info}
+    section#links
+      a(href='/trip/' + trip.id) Powr&oacute;t
