@@ -59,7 +59,7 @@ async function fillRegisterForm(driver, {
 }
 
 describe('Selenium', function () {
-  const TIMEOUT = 2000;
+  const TIMEOUT = 4000;
   let driver = {};
   let appHandle = {};
   let db = {};
