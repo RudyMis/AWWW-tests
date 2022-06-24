@@ -81,7 +81,7 @@ describe('Selenium', function () {
   });
 
   it('check title', async function () {
-    this.timeout(3000);
+    this.timeout(0);
     await driver.get('http://localhost:3000');
     await takeScreenshot(driver, 'test.png');
     const title = await driver.getTitle();
