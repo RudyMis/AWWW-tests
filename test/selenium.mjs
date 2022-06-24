@@ -246,7 +246,7 @@ describe('Selenium', function () {
     await buttons.findElement(By.css('a')).click();
     await driver.wait(until.elementLocated(By.id('trips')), TIMEOUT);
     const url = await driver.getCurrentUrl();
-    url.should.equal('http://localhost:3000/');
+    url.should.equal('http://localhost:3000/abcd');
   });
 
   after(async function () {
